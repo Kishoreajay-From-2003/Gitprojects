@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond|' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* heading section */
+        .headi{
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            background-color: rgb(136, 121, 176);
+            height: 45px;
+            color: white;
+            height: 90px;
+            
+        }
+        .headi div{
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-size:20px;
+        }
+        .mhead{
+            padding-top: 20px;
+            border-bottom: 3px solid white ;
+            width: 120px;
+            margin-left: 45%;
+            font-size: 30px;
+
+        }
+        .sideh > div{
+           margin-left: 1030px;
+           font-weight: 400;
+         
+        }
+        .sideh span{
+            margin-left: 10px;
+            font-weight: 400;
+            border: 1px solid white;
+            padding: 2px 5px;
+            border-radius: 5px;
+            background-color: rgb(114, 101, 150);
+        }
+        .sideh span:hover{
+            background-color:rgb(136, 121, 176) ;
+        }
+        .sideh{
+            color:rgb(254, 253, 254);
+            font-weight:300;
+        }
+        /* navi bar */
+        .navbar{
+            margin-top: 90px;
+            position: fixed;
+            width: 13%;
+            background-color: rgb(136, 121, 176) ;
+            color: white;
+            height: 100%;
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-size:20px;
+            border-right: solid  rgb(136, 121, 176) ;
+            
+        }
+        .navbar a:hover{
+             background-color: white;
+            color: rgb(136, 121, 176);
+        }
+        .navbar a{
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .navbar :nth-child(1){
+            background-color: white;
+            color: rgb(136, 121, 176);
+        }
+        .navbar div{
+            margin-top: 150px;
+           text-align: center;
+            background-color: rgb(136, 121, 176);
+            color:white;
+            border: 1px solid white;
+           border-radius: 30px;
+           padding: 7px 2px;
+           position: sticky;
+        }
+        .navbar div:hover{
+             background-color: white;
+           color: rgb(136, 121, 176);
+        }
+        /* blog template */
+        .grid{
+            display: grid;
+            margin-left: 20%;
+            grid-template-columns: auto 590px; 
+            grid-template-rows: 430px 400px;
+            column-gap: 60px;
+            row-gap: 5px;
+        }
+        .grid div{
+             margin-top: 130px;
+             margin-bottom: 0px;
+             
+        }
+        .imga{
+            border: 3px solid rgb(243, 243, 243);
+            width: 400px;
+            height: 380px;
+            padding: 10px;
+            border-radius: 30px;
+        }
+        .imga:hover{
+            border-color: rgb(195, 173, 252);
+        }
+        /*  */
+         .imgb{
+            border: 3px solid rgb(243, 243, 243);
+            width: 200px;
+            height: 220px;
+            padding: 10px;
+            border-radius: 30px;
+
+        }
+        .imgb1{
+            border: 3px solid rgb(243, 243, 243);
+            width: 200px;
+            height: 235px;
+            padding: 10px;
+            border-radius: 30px;
+        }
+         .imgb1:hover{
+            border-color: rgb(195, 173, 252);
+        }
+        .imgb:hover{
+            border-color: rgb(195, 173, 252);
+        }
+        .oc{
+            height: 300px;
+            width: 400px;
+        }
+        .sc{
+            height: 150px;
+            width: 200px;
+        }
+        /* description of images */
+        div.desc{
+            margin-top: 5px;
+        }
+        .desc h4{
+            margin-bottom: 5px;
+        }
+        .desc p{
+            margin-top: 5px;
+        }
+        .desc span{
+            margin-left:43%;
+            font-size: smaller;
+        }
+        /*  */
+        .grid h4{
+            color: rgb(162, 201, 111);
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .bold::first-letter{
+            font-size:120% ;
+        }
+        #bol{
+            color: rgb(0, 109, 255);
+        }
+        .grid img{
+            border-radius: 20px;
+        }
+        /* profile */
+        .profile{
+            border-radius: 50%;
+            height: 30px;
+            width: 35px;
+            position: absolute;
+            left: 265px;
+            top: 496px;
+        }
+        .profile1{
+             border-radius: 50%;
+            height: 30px;
+            width: 35px;
+            position: absolute;
+            left: 265px;
+            top: 932px;
+
+        }
+        /*  */
+        .author{
+            margin-left: 35px;
+        }
+        /* button */
+        button{
+            margin-left: 20px;
+            border: none;
+            color: rgb(106, 137, 240);
+        }
+        
+        button:hover{
+            background-color:  rgb(106, 137, 240);
+            color: white;
+        }
+        /* float right */
+        .right{
+            float:right;
+            position: fixed;
+            width: 15%;
+            height: 100%;
+            top: 90px;
+            right: 0;
+            background-color: black;
+            color: white;
+            padding:5px;
+            z-index: 0;
+        }
+        .right img{
+            width: 200px;
+            height: 300px;
+        }
+        /* ad */
+        .l1{
+
+            color: white;
+            font-weight: bold;
+            font-size:28px;
+        }
+        .l2{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .l3{
+            text-align: center;
+            background-color: rgb(143, 132, 255);
+            color: black;
+            border-radius: 30px;
+            padding: 8px 16px;
+        }
+        .l3:hover{
+            background-color: rgb(127, 105, 204);
+            color: white;
+        }
+        /* how to post */
+        .post{
+            margin-left: 20%;
+            margin-top: 15%;
+            background-color: rgb(136, 121, 176);
+            color: white;
+            width: 380px;
+            padding: 10px 30px;
+            border-radius: 30px;
+             font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-size:18px;
+            border: 3px solid rgb(204, 204, 204);
+           border-radius: 30px;
+
+        }
+        .post div{
+            margin-bottom: 15px;
+            font-weight:500;
+            border-bottom: 2px solid white;
+            width: 320px;
+        }
+        .post ol{
+            margin-bottom: 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- blog title -->
+     <div class="headi">
+        <div class="mhead">Everyday blog !</div>
+        <div class="sideh">
+                <div><span>login</span> <span>get a demo</span></div>
+        </div>
+        </div>
+    <div>
+    <!-- sidebar -->
+ 
+    <nav class="navbar">
+        <a href>Home</a>
+        <a href=>Blog</a>
+        <a href=>Categories</a>
+        <a href=>About</a>
+        <a href=>Contact</a>
+        <div>click to <br>
+            write a blog+</div>
+    </nav>
+    <!-- blog section -->
+     <div class="grid">
+        <div class="imga"><img src="./projectfour/blog1.jpg" alt="" class="oc">
+            <div class="desc"><h4>Marketing</h4>
+            <p class="bold" id="bol">Your company might be in a need of a social media audit</p>
+            <p class="author"><img src="./projectfour/pro4.jpg" alt="" class="profile"> by Rubeus hagrid <span>july 26,2025</span></p>
+        </div>
+        </div>
+        <!-- sb -->
+        <div class="imgb1"><img src="./projectfour/blog2.jpg" alt="" class="sc">
+            <div class="desc"><h4>Business</h4>
+            <p class="bold">How can business utilize email marketing to nuture their leads <button style="margin-left: 43px;">Read more ></button></p>
+             </div>
+        </div>
+        <!-- tb -->
+        <div class="imga"><img src="./projectfour/blog3.jpg" alt="" class="oc">
+            <div class="desc"><h4>Technology</h4>
+            <p class="bold">Is Ai overtaking the IT employees <button style="margin-left: 70px;">Read more ></button></p>
+            <p class="author"><img src="./projectfour/pro2.jpg" alt="" class="profile1">by Alex david <span style="margin-left: 49%">may 20,2025</span></p>
+            </div>
+        </div>
+        <!-- fb -->
+        <div class="imgb"><img src="./projectfour/blog4.jpg" alt="" class="sc">
+            <div class="desc"><h4>Species</h4>
+            <p class="bold">Exploring the fasinating realm of birds <button>Read more ></button></p>
+            </div>
+        </div>
+        <!--  -->
+     </div>
+     
+     <!-- ads -->
+      <div class="right">
+        <div><img src="./projectfour/thumbsup.jpg" alt=""></div>
+        <div class="l1">Good managers <br>
+        mean better <br>
+        sales growth</div>
+        <div class="l2">join entrepreneurs driving impact
+        and growing their business</div>
+        <div class="l3">Get started</div>
+        <div></div>
+      </div>
+      <!-- how to post -->
+       <div class="post">
+     <ol >
+        <div>How to post in everyday blog follow the steps:</div>
+        <li>First login using google account/Apple account.</li>
+        <li>Fill out the profile section.</li>
+        <li>Go to left side of webpage and click write a blog section.</li>
+        <li>Upload a image and start writing your blog.</li>
+        <li>Finally post it public.</li>
+     </ol>
+     </div>
+    
+     
+
+</body>
+</html>

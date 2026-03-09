@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            box-sizing:content-box;
+        }
+        .logo{
+            width: 50px;
+            height: 50px;
+            top: 20px;
+        }
+        .profile{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        .title{
+            position: absolute;
+            top: 7px;
+            left: 45px;
+        }
+        header{
+            background-color: rgb(252, 248, 248);
+            height: 70px;
+            border-bottom: 1px solid grey;
+        }
+        .text{
+            position: absolute;
+            right: 7px;
+            top: 45px;
+        }
+        ul{
+            position: fixed;
+            width: 15%;
+            height: 100%;
+            background-color:  rgb(252, 248, 248);
+            border-right: 1px solid black;
+        }
+        li{
+            background-color:black;
+            color: white;
+            border: 1px solid grey;
+            padding: 8px 10px;
+        }
+        li:hover{
+            background-color: rgb(252, 248, 248) ;
+            color: black;
+            text-transform: uppercase;
+        }
+        .rightside{
+            display: flex;
+            background-color: black;
+            color: white;
+            column-gap: 20px;
+            width: 165px;
+            padding: 5px 16px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .rightside div{
+            text-align: center;
+            justify-content: center;
+            border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+            padding: 10px;
+        }
+        .rs{
+            position: sticky;
+            display: flex;
+            background-color: black;
+            color: white;
+             width: 390px;
+            margin-top: 35px;
+            column-gap: 20px;
+            padding: 5px 16px;
+            border-radius: 10px;
+        }
+        .rs div:nth-child(3){
+            background-color: rgb(235, 28, 34);
+            border-radius: 10px;
+        }
+        .rs div{
+            display: block;
+             border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+            padding: 30px;
+            text-align: center;
+            justify-content: center;
+        }
+        .prof{
+            float: right;
+            position: fixed;
+            position: absolute;
+            margin-top: 0;
+            right: 0;
+            top: 72px;
+            background-color: rgb(242, 242, 242);
+            padding: 20px 60px;
+            border-radius: 10px;
+          
+        }
+        .noti{
+            float: right;
+            position: absolute;
+            margin-top: 0;
+            right: 0;
+            top: 270px;
+            background-color: rgb(242, 242, 242);
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: 15%;
+        }
+        .meso{
+            margin-top: 6px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            background-color:white;
+            color: rgb(69, 70, 74);
+            border-radius: 10px;
+        }
+        .meso1{
+            margin-top: 6px;
+            margin-bottom: 6px;
+            background-color:white;
+            color: rgb(69, 70, 74);
+            border-radius: 10px;
+        }
+        .mes{
+             margin-top: 6px;
+            margin-bottom: 20px;
+            background-color: rgb(230, 239, 252);
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+        .activity{
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bord{
+            border: 1px solid black;
+            padding: 2px;
+            border-radius: 5px;
+        }
+        .prof img{
+            border-radius: 50%;
+        }
+        .textf{
+            text-align: center;
+            justify-content: center;
+           
+        }
+        /* gridlayout */
+        .gborder{
+            margin-left: 18%;
+            margin-right: 24%;
+            border: 1px solid grey;
+            border-radius: 10px;
+            margin-top: 40px;
+            color: rgb(255, 255, 255);
+            background-color: black;
+            padding: 7px;
+            
+        }
+        .gridl{
+            margin-left:40px;
+            display: grid;
+            color: white;
+            grid-template-columns: auto auto auto;
+            column-gap: 20px;
+            width: 700px;
+        }
+        .grid2{
+            margin-left:70px ;
+            display: grid;
+            color: white;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+            row-gap: 15px;
+            margin-top: 12px;
+            width: 700px;
+        }
+        .grid2 div{
+            border-bottom: 2px solid rgb(235, 28, 34);
+            width: 250px;
+        }
+        .grid2 div:hover:not(.gh){
+            background-color:  rgb(242, 242, 242);
+            color: black;
+            border-radius: 10px;
+        }
+        .grid2 img{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            left:-30px;
+            top: 5px;
+        }
+        .widget{
+            float: right;
+            position: absolute;
+            right: 25%;
+            top: 100px;
+            background-color: rgb(242, 242, 242);
+            color:black;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            border: 2px solid  rgb(235, 28, 34);
+        }
+        .widget img{
+            border-radius: 5px;
+            width: 20px;
+            height: 20px;
+            top: 3px;
+            margin-right: 6px;
+            position: relative;
+        }
+        .widget span{
+            background-color: rgb(235, 28, 34);
+            color: white;
+            border-radius: 6px;
+            padding: 0 5px 0 5px;
+        }
+        .gh{
+            background-color: rgb(235, 28, 34);
+        }
+        .fc{
+            border-right: 1px solid grey;
+        }
+        .space{
+            margin-left: 20px;
+        }
+        .leftbot{
+            position: absolute;
+            left: 26px;
+            bottom:18%;
+            background-color: rgb(197, 197, 197);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .li2{
+            color: rgb(87, 87, 87);
+            margin-top: 3px;
+        }
+        .li3{
+            background-color: rgb(175, 213, 245);
+            text-align: center;
+            width: 60px;
+            border-radius: 5px;
+            margin-left: 19px;
+            margin-top: 3px;
+        }
+        .li3:hover{
+            background-color: rgb(145, 168, 204);
+        }
+        .last{
+            margin-top: 350px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logoadmin.jpg" alt="" class="logo">
+        <img src="./img/profileadmin.jpg" alt="" class="profile">
+        <h1 class="title">screener</h1>
+    </header>
+    <!--for profile  -->
+    <div class="text">profile</div>
+    <!--  -->
+    <ul>
+        <li>home</li>
+        <li>project</li>
+        <li>task</li>
+        <li>settings</li>
+        
+        <li class="last">help & info</li>
+        <li>logout</li>
+    </ul>
+    <div class="widget">
+        <div>hello <span>arun!</span></div>
+        <div><img src="./img/calender.jpg" alt="">22/07/25</div>
+    </div>
+    <div class="rightside" style="margin-left: 18%;">
+        <div>users <br>
+            560000+</div>
+        <div>orders <br>
+            15000+</div>
+    </div>
+    <div style="margin-left: 18%;" class="rs">
+        <div>finished <br>18</div>
+        <div>tracked <br>31h</div>
+        <div>efficiency <br>93% </div>
+    </div>
+    <div class="prof">
+        <img src="./img/profileriside.jpg" alt="" width="100px" height="100px">
+        <div class="textf"><h2>arun</h2>
+        <p>arun@2456.com</p></div>
+        <hr>
+    </div>
+    <div class="noti">
+        <div class="activity">--Activity--</div>
+        <div class="bord">
+            <div class="meso">fload miles messaged you:</div>
+                <div class="mes">hi next week we starting a project i call you later</div>
+            <div class="meso">gown kavins</div>
+                <div class="mes">commented you on project</div>
+            <div class="meso">cristian watson</div>
+                <div class="mes">project completed!.</div>
+            <div class="meso1">write something...</div>
+        </div>
+    </div>
+    <!-- grid layout -->
+    <div class="gborder">
+    <div class="gridl">
+        <div class="fc"><b>current tasks</b></div>  <div class="fc">status:30%</div> <div>finishing by:week</div>
+    </div>
+    <div class="grid2">
+        <div><img src="./img/progress.jpg" alt="">ongoing:project review for market</div> <div>in progress</div>
+        <div class="gh"><img src="./img/search.jpg" alt="">ux research for product</div> <div class="gh"> hold</div>
+        <div><img src="./img/code.jpg" alt="">app design and development </div><div>done</div>
+        <div><img src="./img/finished.jpg" alt="">attained final stage </div><div>waiting for conformation</div>
+    </div>
+    </div>
+    <div class="leftbot">
+        <div><b>upgrade to pro</b></div>
+        <div class="li2">get 1 month free</div>
+        <div class="li3">upgrade</div>
+    </div>
+    
+
+</body>
+</html>
